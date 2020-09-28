@@ -5,6 +5,8 @@ using UnityEngine;
 public class SocialDistancingZone : MonoBehaviour
 {
 
+    public bool gameOver = false;
+
     // Update is called once per frame
     void Update()
     {
@@ -13,7 +15,8 @@ public class SocialDistancingZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
+        Debug.Log("Game Over");
+        gameOver = true;
     }
 
 }
