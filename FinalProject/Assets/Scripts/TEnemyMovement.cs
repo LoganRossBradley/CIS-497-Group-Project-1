@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class EnemyMovement : MonoBehaviour
+//tutorial version without game over requirements
+public class TEnemyMovement : MonoBehaviour
 {
     public float speed = 40;
 
+    private bool gameOver = false;
     //private Rigidbody enemy;
-    private GoalManager goalRef;
+    //private GoalManager goalRef;
 
     // Start is called before the first frame update
     void Start()
     {
-        goalRef = GameObject.FindGameObjectWithTag("Goal").GetComponent<GoalManager>();
+        //goalRef = GameObject.FindGameObjectWithTag("Goal").GetComponent<GoalManager>();
         //enemy = GetComponent<Rigidbody>();
         StartCoroutine(Movement());
     }
@@ -20,7 +21,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!goalRef.gameOver)
+        //if (!goalRef.gameOver)
             transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
     }
 
@@ -29,7 +30,7 @@ public class EnemyMovement : MonoBehaviour
 
         yield return new WaitForSeconds(4f);
 
-        while (!goalRef.gameOver)
+        while (!gameOver)
         {
             transform.Rotate(0, 180, 0);
 

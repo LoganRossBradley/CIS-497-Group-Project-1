@@ -5,18 +5,22 @@ using UnityEngine;
 public class SocialDistancingZone : MonoBehaviour
 {
 
-    public bool gameOver = false;
+    private GoalManager goalRef;
 
     // Update is called once per frame
     void Update()
     {
-        
+        goalRef = GameObject.FindGameObjectWithTag("Goal").GetComponent<GoalManager>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Game Over");
-        gameOver = true;
+        if(other.gameObject.tag.Equals("Enemy") && !goalRef.gameOver)
+        {
+            Debug.Log("Game Over");
+            goalRef.gameOver = true;
+        }
+        
     }
 
 }

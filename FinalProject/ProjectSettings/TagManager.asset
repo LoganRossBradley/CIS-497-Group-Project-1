@@ -7,6 +7,7 @@ TagManager:
   - SocialDistancingZone
   - Enemy
   - SpawnLocation
+  - Goal
   layers:
   - Default
   - TransparentFX
