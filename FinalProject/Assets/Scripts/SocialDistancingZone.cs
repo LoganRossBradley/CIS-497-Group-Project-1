@@ -6,6 +6,7 @@ public class SocialDistancingZone : MonoBehaviour
 {
 
     private GoalManager goalRef;
+    
 
     // Update is called once per frame
     void Update()
@@ -19,6 +20,7 @@ public class SocialDistancingZone : MonoBehaviour
         {
             Debug.Log("Game Over");
             goalRef.gameOver = true;
+            goalRef.gotCorona = true;
         }
         
     }

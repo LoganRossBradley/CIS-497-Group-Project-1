@@ -6,9 +6,14 @@ public class GoalManager : MonoBehaviour
 {
     public bool gameOver = false;
     public bool win = false;
+    public bool gotCorona = false;
 
     public GameObject winText;
-    public GameObject loseText;
+    public GameObject loseTextTime;
+    public GameObject loseTextIll;
+    public GameObject goalText;
+    public GameObject timerText;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +27,20 @@ public class GoalManager : MonoBehaviour
         if(gameOver && win)
         {
             winText.SetActive(true);
+            timerText.SetActive(false);
+            goalText.SetActive(false);
         }
-        else if (gameOver && !win)
+        else if (gameOver && !win && gotCorona)
         {
-            loseText.SetActive(true);
+            loseTextIll.SetActive(true);
+            timerText.SetActive(false);
+            goalText.SetActive(false);
+        }
+        else if (gameOver && !win && !gotCorona)
+        {
+            loseTextTime.SetActive(true);
+            timerText.SetActive(false);
+            goalText.SetActive(false);
         }
 
         //this spot can be for scene reset

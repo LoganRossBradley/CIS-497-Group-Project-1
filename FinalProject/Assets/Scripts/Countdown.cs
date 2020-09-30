@@ -27,11 +27,11 @@ public class Countdown : MonoBehaviour
         if(timeLeft > 0 && !goalRef.gameOver)
         {
             timeLeft -= Time.deltaTime;
-            timerRef.text = "Reach the goal in time!\n Time Remaining: " + timeLeft.ToString("F0");
+            timerRef.text = "Icecream will melt in " + timeLeft.ToString("F0");
         }
         else if(timeLeft <= 0 && !goalRef.gameOver)
         {
-            Debug.Log("Out of Time! Game Over!");
+            //Debug.Log("Out of Time! Game Over!");
             goalRef.gameOver = true;
         }
     }
