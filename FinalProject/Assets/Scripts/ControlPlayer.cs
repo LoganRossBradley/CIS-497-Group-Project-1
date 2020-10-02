@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * James Difiglio, Benjamin Schuster
+ * Project 1
+ * Manages Player Control in main game 
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

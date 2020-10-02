@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * James Difiglio
+ * Project 1
+ * Manages social distancing zones throwing game overs 
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

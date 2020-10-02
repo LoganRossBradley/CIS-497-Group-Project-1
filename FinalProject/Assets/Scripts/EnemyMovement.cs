@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * James Difiglio
+ * Project 1
+ * Manages Enemy Control in main game 
+ */
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

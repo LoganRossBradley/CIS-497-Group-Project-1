@@ -1,7 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ * James Difiglio, Benjamin Schuster
+ * Project 1
+ * Manages Enemy Control in tutorial 
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//tutorial version without game over requirements
 public class TEnemyMovement : MonoBehaviour
 {
     public float speed = 40;

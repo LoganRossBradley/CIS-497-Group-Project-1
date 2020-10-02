@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * James Difiglio
+ * Project 1
+ * Makes camera follow player
+ * */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

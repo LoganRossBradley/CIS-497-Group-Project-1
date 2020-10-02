@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * James Difiglio, Benjamin Schuster
+ * Project 1
+ * Manages social distancing zones moving player back in Tutorial 
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * Benjamin Schuster
+ * Project 1
+ * Manages win/loss conditions and texts. Also restarts games
+ */
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
