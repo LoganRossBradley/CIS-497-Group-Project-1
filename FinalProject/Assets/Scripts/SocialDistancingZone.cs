@@ -11,11 +11,12 @@ public class SocialDistancingZone : MonoBehaviour
 {
 
     private GoalManager goalRef;
-    
+    private Animator animator;
 
     // Update is called once per frame
     void Update()
     {
+        animator = GetComponentInChildren<Animator>();
         goalRef = GameObject.FindGameObjectWithTag("Goal").GetComponent<GoalManager>();
     }
 
@@ -23,6 +24,7 @@ public class SocialDistancingZone : MonoBehaviour
     {
         if(other.gameObject.tag.Equals("Enemy") && !goalRef.gameOver)
         {
+            animator.SetFloat("Speed_f", 0);
             Debug.Log("Game Over");
             goalRef.gameOver = true;
             goalRef.gotCorona = true;

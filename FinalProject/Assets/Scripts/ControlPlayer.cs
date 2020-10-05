@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Benjamin Schuster, James Difiglio, Jerod Lockhart
+ * Project 1
+ * Control player movement and animation
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,10 +14,12 @@ public class ControlPlayer : MonoBehaviour
     private float horizontalInput;
     private float forwardInput;
     private GoalManager gameRef;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         gameRef = GameObject.FindGameObjectWithTag("Goal").GetComponent<GoalManager>();
     }
 
@@ -30,6 +38,12 @@ public class ControlPlayer : MonoBehaviour
             //Moves in accordance to the direction the player is facing
             transform.rotation = Quaternion.LookRotation(movement);
             transform.Translate(movement * speed * Time.deltaTime, Space.World);
+
+            if (horizontalInput + forwardInput == 0)
+                animator.SetFloat("Speed_f", 0);
+            else
+                animator.SetFloat("Speed_f", 1);
+
 
         }
 

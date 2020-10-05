@@ -13,10 +13,12 @@ public class EnemyMovement : MonoBehaviour
 
     //private Rigidbody enemy;
     private GoalManager goalRef;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         goalRef = GameObject.FindGameObjectWithTag("Goal").GetComponent<GoalManager>();
         //enemy = GetComponent<Rigidbody>();
         StartCoroutine(Movement());
@@ -25,8 +27,13 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!goalRef.gameOver)
+        if (!goalRef.gameOver)
+        {
+            animator.SetFloat("Speed_f", 1f);
             transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
+        }
+        else
+            animator.SetFloat("Speed_f", 0f);
     }
 
     IEnumerator Movement()

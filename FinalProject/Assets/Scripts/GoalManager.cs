@@ -60,5 +60,6 @@ public class GoalManager : MonoBehaviour
     {
         win = true;
         gameOver = true;
+        other.GetComponentInChildren<Animator>().SetFloat("Speed_f", 0);
     }
 }

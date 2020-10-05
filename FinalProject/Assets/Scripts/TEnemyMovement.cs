@@ -13,12 +13,14 @@ public class TEnemyMovement : MonoBehaviour
     private bool gameOver = false;
     //private Rigidbody enemy;
     //private GoalManager goalRef;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         //goalRef = GameObject.FindGameObjectWithTag("Goal").GetComponent<GoalManager>();
         //enemy = GetComponent<Rigidbody>();
+        animator = GetComponentInChildren<Animator>();
         StartCoroutine(Movement());
     }
 
@@ -27,6 +29,7 @@ public class TEnemyMovement : MonoBehaviour
     {
         //if (!goalRef.gameOver)
             transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
+        animator.SetFloat("Speed_f", 1f);
     }
 
     IEnumerator Movement()
