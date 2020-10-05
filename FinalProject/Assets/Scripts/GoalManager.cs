@@ -50,7 +50,7 @@ public class GoalManager : MonoBehaviour
         }
 
         //this spot can be for scene reset
-        if (playerControllerScript.gameOver && Input.GetKeyDown(KeyCode.R))
+        if (gameOver && Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
