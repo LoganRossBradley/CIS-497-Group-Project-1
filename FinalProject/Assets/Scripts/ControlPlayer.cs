@@ -1,9 +1,4 @@
-﻿/*
- * James Difiglio, Benjamin Schuster
- * Project 1
- * Manages Player Control in main game 
- */
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,13 +21,19 @@ public class ControlPlayer : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
 
-        if(!gameRef.gameOver)
+        if (!gameRef.gameOver)
         {
-            transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
-            transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+            // transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
+            // transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+            Vector3 movement = new Vector3(horizontalInput, 0.0f, forwardInput);
+
+            //Moves in accordance to the direction the player is facing
+            transform.rotation = Quaternion.LookRotation(movement);
+            transform.Translate(movement * speed * Time.deltaTime, Space.World);
+
         }
-        
+
     }
 
-    
+
 }
