@@ -628,10 +628,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 3b713ad3-0b39-47c0-a4a0-07c598979608
+  cloudProjectId: a53ccb60-790a-4866-bef8-5fc68c332fc1
   framebufferDepthMemorylessMode: 0
-  projectName: FinalProject
-  organizationId: difigliojimmy
+  projectName: Social Distancing Simulator 2020
+  organizationId: dapyro438
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
