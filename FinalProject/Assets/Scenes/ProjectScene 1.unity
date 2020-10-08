@@ -1211,7 +1211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347151219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3, y: 1, z: -31}
+  m_LocalPosition: {x: -2.3, y: 1, z: -22.99}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 1965706969}
@@ -1673,7 +1673,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 80
   orthographic: 0
   orthographic size: 12
   m_Depth: -1
@@ -1699,7 +1699,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460120420}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -4.8, y: 24, z: -27.4}
+  m_LocalPosition: {x: -4.8, y: 25, z: -19.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9266,6 +9266,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1180102076}
     m_Modifications:
+    - target: {fileID: 114334982121622094, guid: 99f0e99bb99c79d4e90b4cf4141f9e42,
+        type: 3}
+      propertyPath: turnTimer
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 812504101371865032, guid: 99f0e99bb99c79d4e90b4cf4141f9e42,
         type: 3}
       propertyPath: m_Name

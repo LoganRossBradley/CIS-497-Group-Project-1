@@ -1,7 +1,8 @@
 ﻿/*
- * James Difiglio
+ * James Difiglio, Logan Ross
  * Project 1
  * Manages Enemy Control in main game 
+ * logan - allows us to edit speed and time before they turn around for each enemy
  */
  using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public float speed = 40;
+    public float turnTimer = 4f;
 
     //private Rigidbody enemy;
     private GoalManager goalRef;
@@ -39,7 +41,7 @@ public class EnemyMovement : MonoBehaviour
     IEnumerator Movement()
     {
 
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(turnTimer);
 
         while (!goalRef.gameOver)
         {
@@ -48,7 +50,7 @@ public class EnemyMovement : MonoBehaviour
             //enemy.AddForce(Vector3.forward * speed * Time.deltaTime, ForceMode.Impulse);
 
 
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(turnTimer);
         }
 
     }
