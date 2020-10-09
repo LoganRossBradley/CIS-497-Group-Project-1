@@ -40,6 +40,6 @@ public class TutorialSceneManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene("ProjectScene 1");
+        SceneManager.LoadScene("ProjectLevel_James");
     }
 }
