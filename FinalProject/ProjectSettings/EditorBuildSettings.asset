@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ProjectLevel_Ben.unity
     guid: 4b4320fdd5686c3469c939839fd051e4
+  - enabled: 1
+    path: Assets/Scenes/ProjectLevel_Logan.unity
+    guid: 59005d462b6b7d848ba8d021d56b55f4
   m_configObjects: {}

@@ -228,6 +228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 209641533}
+  - component: {fileID: 209641534}
   m_Layer: 0
   m_Name: GoTo4
   m_TagString: Untagged
@@ -249,6 +250,19 @@ Transform:
   m_Father: {fileID: 113945302}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &209641534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209641532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8ea64929c72bf4ab29c6687bcefc16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScene: 
 --- !u!1 &258199643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,6 +1394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1356491937}
+  - component: {fileID: 1356491938}
   m_Layer: 0
   m_Name: GoTo3
   m_TagString: Untagged
@@ -1401,6 +1416,19 @@ Transform:
   m_Father: {fileID: 113945302}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1356491938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356491936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8ea64929c72bf4ab29c6687bcefc16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScene: ProjectLevel_Ben
 --- !u!1 &1414357283
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,7 +2120,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1886261463}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1356491938}
+        m_MethodName: NextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1886261463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2171,7 +2210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8ea64929c72bf4ab29c6687bcefc16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: ProjectLevel_Ben
+  targetScene: ProjectLevel_Logan
 --- !u!1 &1962556747
 GameObject:
   m_ObjectHideFlags: 0
