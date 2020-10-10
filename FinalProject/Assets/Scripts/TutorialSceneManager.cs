@@ -11,12 +11,8 @@ using UnityEngine.SceneManagement;
 
 public class TutorialSceneManager : MonoBehaviour
 {
-    public bool startTutorial = false;
-    public GameObject controlTxt;
-    public GameObject controlPic;
-    public GameObject tutBanner;
-    public GameObject titleCard;
-    public GameObject bootScreen;
+    public GameObject textTip;
+    private bool tutorialOver = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,19 +23,21 @@ public class TutorialSceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!startTutorial && Input.GetKey(KeyCode.R))
+        if(tutorialOver && Input.GetKey(KeyCode.R))
         {
-            startTutorial = true;
-            titleCard.SetActive(false);
-            bootScreen.SetActive(false);
-            controlTxt.SetActive(true);
-            controlPic.SetActive(true);
-            tutBanner.SetActive(true);
+            resetScene();
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene("ProjectLevel_James");
+        textTip.SetActive(true);
+        tutorialOver = true;
+    }
+
+    public void resetScene()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

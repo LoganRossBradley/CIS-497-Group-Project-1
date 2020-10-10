@@ -28,8 +28,7 @@ public class TControlPlayer : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
 
-        if (gameRef.startTutorial)
-        {
+        
             //transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
             //transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
             Vector3 movement = new Vector3(horizontalInput, 0.0f, forwardInput);
@@ -43,7 +42,7 @@ public class TControlPlayer : MonoBehaviour
                 animator.SetFloat("Speed_f", 0);
             else
                 animator.SetFloat("Speed_f", 1);
-        }
+        
 
 
     }

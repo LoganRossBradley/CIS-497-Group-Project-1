@@ -52,7 +52,7 @@ public class GoalManager : MonoBehaviour
         //this spot can be for scene reset
         if (gameOver && Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            restartScene();
         }
     }
 
@@ -61,5 +61,11 @@ public class GoalManager : MonoBehaviour
         win = true;
         gameOver = true;
         other.GetComponentInChildren<Animator>().SetFloat("Speed_f", 0);
+    }
+
+    public void restartScene()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
