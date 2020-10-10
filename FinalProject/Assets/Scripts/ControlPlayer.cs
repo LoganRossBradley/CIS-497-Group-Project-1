@@ -15,10 +15,12 @@ public class ControlPlayer : MonoBehaviour
     private float forwardInput;
     private GoalManager gameRef;
     private Animator animator;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         gameRef = GameObject.FindGameObjectWithTag("Goal").GetComponent<GoalManager>();
     }
@@ -40,7 +42,11 @@ public class ControlPlayer : MonoBehaviour
             transform.Translate(movement * speed * Time.deltaTime, Space.World);
 
             if (horizontalInput + forwardInput == 0)
+            {
+                //this sets velocity to 0, fixes phantom movement
+                rb.velocity = Vector3.zero;
                 animator.SetFloat("Speed_f", 0);
+            }
             else
                 animator.SetFloat("Speed_f", 1);
 
