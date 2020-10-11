@@ -413,7 +413,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "You can find more information on Covid-19 \non the CDC website"
+  m_Text: "You can find more information on Covid-19 \non the CDC website www.cdc.gov/coronavirus"
 --- !u!222 &310498516
 CanvasRenderer:
   m_ObjectHideFlags: 0
