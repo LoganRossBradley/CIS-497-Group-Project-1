@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ProjectLevel_Logan.unity
     guid: 59005d462b6b7d848ba8d021d56b55f4
+  - enabled: 1
+    path: Assets/Scenes/ProjectLevel_Jerod.unity
+    guid: 1b32451b9b28e0f4aa53f39ba0fae862
   m_configObjects: {}

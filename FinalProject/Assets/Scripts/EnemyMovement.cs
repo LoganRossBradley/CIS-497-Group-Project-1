@@ -29,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!goalRef.gameOver)
+        if (!goalRef.gameOver && speed != 0)
         {
             animator.SetFloat("Speed_f", 1f);
             transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
