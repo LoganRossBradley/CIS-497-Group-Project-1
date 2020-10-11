@@ -4451,7 +4451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c857ac0a1c7044047856ebf050024811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 30
+  timeLeft: 25
   timerRef: {fileID: 1586286552}
   goalText: {fileID: 1584265580}
   meltText: {fileID: 604502753}
