@@ -14,10 +14,12 @@ public class TControlPlayer : MonoBehaviour
     private float forwardInput;
     private TutorialSceneManager gameRef;
     private Animator animator;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         gameRef = GameObject.FindGameObjectWithTag("Goal").GetComponent<TutorialSceneManager>();
     }
@@ -37,11 +39,14 @@ public class TControlPlayer : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(movement);
             transform.Translate(movement * speed * Time.deltaTime, Space.World);
 
-            //play walk while moving, idle while still
-            if (horizontalInput + forwardInput == 0)
-                animator.SetFloat("Speed_f", 0);
-            else
-                animator.SetFloat("Speed_f", 1);
+        //play walk while moving, idle while still
+        if (horizontalInput == 0 && forwardInput == 0)
+        {  
+             rb.velocity = Vector3.zero;
+            animator.SetFloat("Speed_f", 0);
+        }
+        else
+            animator.SetFloat("Speed_f", 1);
         
 
 

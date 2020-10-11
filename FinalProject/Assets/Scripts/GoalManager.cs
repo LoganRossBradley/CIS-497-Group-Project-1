@@ -19,6 +19,7 @@ public class GoalManager : MonoBehaviour
     public GameObject loseTextIll;
     public GameObject goalText;
     public GameObject timerText;
+    public GameObject timeRemainText;
 
 
     // Start is called before the first frame update
@@ -33,20 +34,17 @@ public class GoalManager : MonoBehaviour
         if(gameOver && win)
         {
             winText.SetActive(true);
-            timerText.SetActive(false);
-            goalText.SetActive(false);
+            timeRemainText.SetActive(false);
         }
         else if (gameOver && !win && gotCorona)
         {
             loseTextIll.SetActive(true);
-            timerText.SetActive(false);
-            goalText.SetActive(false);
+            timeRemainText.SetActive(false);
         }
         else if (gameOver && !win && !gotCorona)
         {
             loseTextTime.SetActive(true);
-            timerText.SetActive(false);
-            goalText.SetActive(false);
+            timeRemainText.SetActive(false);
         }
 
         //this spot can be for scene reset

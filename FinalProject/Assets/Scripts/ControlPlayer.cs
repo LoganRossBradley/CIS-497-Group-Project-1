@@ -41,7 +41,7 @@ public class ControlPlayer : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(movement);
             transform.Translate(movement * speed * Time.deltaTime, Space.World);
 
-            if (horizontalInput + forwardInput == 0)
+            if (horizontalInput == 0 && forwardInput == 0)
             {
                 //this sets velocity to 0, fixes phantom movement
                 rb.velocity = Vector3.zero;

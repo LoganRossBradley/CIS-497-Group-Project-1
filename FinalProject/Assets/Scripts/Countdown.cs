@@ -10,13 +10,18 @@ using UnityEngine.UI;
 public class Countdown : MonoBehaviour
 {
     public float timeLeft;
+    private float timeStart;
+
     public Text timerRef;
-    //this can be changed to a reference once we have a proper system controller
+    public GameObject goalText;
+    public GameObject meltText;
+
     private GoalManager goalRef;
 
     // Start is called before the first frame update
     void Start()
     {
+        timeStart = timeLeft;
         goalRef = GameObject.FindGameObjectWithTag("Goal").GetComponent<GoalManager>();
     }
 
@@ -27,7 +32,21 @@ public class Countdown : MonoBehaviour
         if(timeLeft > 0 && !goalRef.gameOver)
         {
             timeLeft -= Time.deltaTime;
-            timerRef.text = "Icecream will melt in " + timeLeft.ToString("F0");
+            timerRef.text = timeLeft.ToString("F0");
+
+            //color timer red when low on time
+            if(timeLeft <= 10)
+            {
+                timerRef.color = Color.red;
+            }
+
+            //remove the starting text after a few seconds
+            if(timeLeft < timeStart - 6)
+            {
+                goalText.SetActive(false);
+                meltText.SetActive(false);
+            }
+
         }
         else if(timeLeft <= 0 && !goalRef.gameOver)
         {
