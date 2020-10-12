@@ -188,8 +188,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.2965789, y: 3.447195, z: 1.0858693}
+  m_Center: {x: 0.016397297, y: 1.2235975, z: -0.042934686}
 --- !u!54 &3529601604365082732
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -298,6 +298,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2710736470246981539}
     m_Modifications:
+    - target: {fileID: 2189930536156285976, guid: 7761fe7863570184a8567c08c065017a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 75cbd3d7129b4d844b493226e1cf77a0, type: 2}
     - target: {fileID: 2189930536161521798, guid: 7761fe7863570184a8567c08c065017a,
         type: 3}
       propertyPath: m_Name
@@ -357,6 +362,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189930536161991910, guid: 7761fe7863570184a8567c08c065017a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189930536161991910, guid: 7761fe7863570184a8567c08c065017a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189930536161991910, guid: 7761fe7863570184a8567c08c065017a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7761fe7863570184a8567c08c065017a, type: 3}
