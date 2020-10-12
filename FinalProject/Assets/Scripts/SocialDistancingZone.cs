@@ -13,6 +13,14 @@ public class SocialDistancingZone : MonoBehaviour
     private GoalManager goalRef;
     private Animator animator;
 
+    private AudioSource playerAudio;
+    public AudioClip cough;
+
+    private void Start()
+    {
+        playerAudio = GetComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +36,7 @@ public class SocialDistancingZone : MonoBehaviour
             Debug.Log("Game Over");
             goalRef.gameOver = true;
             goalRef.gotCorona = true;
+            playerAudio.PlayOneShot(cough);
         }
         
     }

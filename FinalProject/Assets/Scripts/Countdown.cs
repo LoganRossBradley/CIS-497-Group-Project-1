@@ -18,11 +18,15 @@ public class Countdown : MonoBehaviour
 
     private GoalManager goalRef;
 
+    private AudioSource playerAudio;
+    public AudioClip outOfTime;
+
     // Start is called before the first frame update
     void Start()
     {
         timeStart = timeLeft;
         goalRef = GameObject.FindGameObjectWithTag("Goal").GetComponent<GoalManager>();
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -52,6 +56,7 @@ public class Countdown : MonoBehaviour
         {
             //Debug.Log("Out of Time! Game Over!");
             goalRef.gameOver = true;
+            playerAudio.PlayOneShot(outOfTime);
         }
     }
 
