@@ -14,7 +14,7 @@ public class ControlPlayer : MonoBehaviour
     private float horizontalInput;
     private float forwardInput;
     private GoalManager gameRef;
-    private Animator animator;
+    public Animator animator;
     private Rigidbody rb;
 
     // Start is called before the first frame update
@@ -45,10 +45,10 @@ public class ControlPlayer : MonoBehaviour
             {
                 //this sets velocity to 0, fixes phantom movement
                 rb.velocity = Vector3.zero;
-                animator.SetFloat("Speed_f", 0);
+                animator.SetFloat("running", 0);
             }
             else
-                animator.SetFloat("Speed_f", 1);
+                animator.SetFloat("running", 1);
 
 
         }
