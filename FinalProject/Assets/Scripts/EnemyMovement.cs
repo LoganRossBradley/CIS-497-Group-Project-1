@@ -31,11 +31,11 @@ public class EnemyMovement : MonoBehaviour
     {
         if (!goalRef.gameOver && speed != 0)
         {
-            animator.SetFloat("Speed_f", 1f);
+            animator.SetFloat("running", 1f);
             transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
         }
         else
-            animator.SetFloat("Speed_f", 0f);
+            animator.SetFloat("running", 0f);
     }
 
     IEnumerator Movement()
