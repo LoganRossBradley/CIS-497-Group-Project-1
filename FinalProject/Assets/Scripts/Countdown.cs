@@ -1,6 +1,6 @@
 ﻿/*
  * Benjamin Schuster
- * Project 1
+ * Social Distancing Simulator (Project 1-3)
  * Countdown timer for the game, update UI timer
  */
 using System.Collections;

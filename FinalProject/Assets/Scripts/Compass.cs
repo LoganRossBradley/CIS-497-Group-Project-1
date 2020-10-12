@@ -1,6 +1,6 @@
 ﻿/*
  * Benjamin Schuster
- * Project 1
+ * Social Distancing Simulator (Project 1-3)
  * Rotates the compass so it will point towards the goal 
  */
 using System.Collections;

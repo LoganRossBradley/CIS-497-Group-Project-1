@@ -1,6 +1,6 @@
 ﻿/*
  * Benjamin Schuster
- * Project 1
+ * Social Distancing Simulator (Project 1-3)
  * Manages UI changes in Tutorial
  */
 using System.Collections;

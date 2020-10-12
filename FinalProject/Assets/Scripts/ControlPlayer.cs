@@ -1,6 +1,6 @@
 ﻿/*
  * Benjamin Schuster, James Difiglio, Jerod Lockhart
- * Project 1
+ * Social Distancing Simulator (Project 1-3)
  * Control player movement and animation
  */
 

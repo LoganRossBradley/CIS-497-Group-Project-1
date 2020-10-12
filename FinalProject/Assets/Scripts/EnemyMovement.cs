@@ -1,10 +1,10 @@
 ﻿/*
  * James Difiglio, Logan Ross
- * Project 1
+ * Social Distancing Simulator (Project 1-3)
  * Manages Enemy Control in main game 
  * logan - allows us to edit speed and time before they turn around for each enemy
  */
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

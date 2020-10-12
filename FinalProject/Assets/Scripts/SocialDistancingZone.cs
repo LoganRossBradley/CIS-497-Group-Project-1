@@ -1,6 +1,6 @@
 ﻿/*
  * James Difiglio
- * Project 1
+ * Social Distancing Simulator (Project 1-3)
  * Manages social distancing zones throwing game overs 
  */
 using System.Collections;

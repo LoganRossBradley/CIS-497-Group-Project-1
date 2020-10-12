@@ -1,6 +1,6 @@
 ﻿/*
  * James Difiglio
- * Project 1
+ * Social Distancing Simulator (Project 1-3)
  * Makes camera follow player
  * */
 using System.Collections;

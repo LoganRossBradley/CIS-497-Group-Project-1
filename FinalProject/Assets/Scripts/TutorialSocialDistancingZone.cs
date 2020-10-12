@@ -1,6 +1,6 @@
 ﻿/*
  * James Difiglio, Benjamin Schuster
- * Project 1
+ * Social Distancing Simulator (Project 1-3)
  * Manages social distancing zones moving player back in Tutorial 
  */
 using System.Collections;

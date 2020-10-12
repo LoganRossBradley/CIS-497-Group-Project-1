@@ -1,9 +1,9 @@
 ﻿/*
  * Benjamin Schuster
- * Project 1
+ * Social Distancing Simulator (Project 1-3)
  * Manages win/loss conditions and texts. Also restarts games
  */
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

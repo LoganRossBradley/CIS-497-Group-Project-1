@@ -1,6 +1,6 @@
 ﻿/*
  * James Difiglio, Benjamin Schuster
- * Project 1
+ * Social Distancing Simulator (Project 1-3)
  * Manages Enemy Control in tutorial 
  */
 using System.Collections;
@@ -29,7 +29,7 @@ public class TEnemyMovement : MonoBehaviour
     {
         //if (!goalRef.gameOver)
             transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.Self);
-        animator.SetFloat("Speed_f", 1f);
+        animator.SetFloat("running", 1f);
     }
 
     IEnumerator Movement()

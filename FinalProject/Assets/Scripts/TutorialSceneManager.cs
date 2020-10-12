@@ -1,6 +1,6 @@
 ﻿/*
  * Benjamin Schuster
- * Project 1
+ * Social Distancing Simulator (Project 1-3)
  * Title and scene transition for tutorial
  * */
 using System.Collections;

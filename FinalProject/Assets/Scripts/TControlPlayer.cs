@@ -1,6 +1,6 @@
 ﻿/*
  * James Difiglio, Benjamin Schuster, Jerod Lockhart
- * Project 1
+ * Social Distancing Simulator (Project 1-3)
  * Control player movement and animation
  */
 using System.Collections;
@@ -43,10 +43,10 @@ public class TControlPlayer : MonoBehaviour
         if (horizontalInput == 0 && forwardInput == 0)
         {  
              rb.velocity = Vector3.zero;
-            animator.SetFloat("Speed_f", 0);
+            animator.SetFloat("running", 0);
         }
         else
-            animator.SetFloat("Speed_f", 1);
+            animator.SetFloat("running", 1);
         
 
 
